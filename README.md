@@ -1,0 +1,30 @@
+# General Server Setup
+
+This repository provides a simple script to help you set up a fresh server quickly.
+
+## Quick Start
+
+To set up your server, run the following command:
+
+```sh
+curl -s setup.sh https://raw.githubusercontent.com/axen9223/general-server-setup/main/setup.sh | bash
+```
+
+### To Setup Docker
+```sh
+curl -s setup.sh https://raw.githubusercontent.com/axen9223/general-server-setup/main/docker-setup.sh | bash
+```
+
+### To Setup ansible
+```sh
+curl -s setup.sh https://raw.githubusercontent.com/axen9223/general-server-setup/main/ansible-setup.sh | bash
+```
+
+## Notes
+
+- Make sure you have `curl` and `bash` installed on your server.
+- Review the contents of `setup.sh` before running it to understand what changes will be made to your system.
+
+## License
+
+This project is licensed under the
