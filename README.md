@@ -8,17 +8,17 @@ To set up your server, run the following command:
 
 ### General Servers Setup
 ```sh
-curl -s setup.sh https://raw.githubusercontent.com/axen9223/general-server-setup/main/setup.sh | bash
+curl -s https://raw.githubusercontent.com/axen9223/general-server-setup/main/setup.sh | bash
 ```
 
 ### Docker Setup
 ```sh
-curl -s setup.sh https://raw.githubusercontent.com/axen9223/general-server-setup/main/docker-setup.sh | bash
+curl -s https://raw.githubusercontent.com/axen9223/general-server-setup/main/docker-setup.sh | bash
 ```
 
 ### Ansible Setup
 ```sh
-curl -s setup.sh https://raw.githubusercontent.com/axen9223/general-server-setup/main/ansible-setup.sh | bash
+curl -s https://raw.githubusercontent.com/axen9223/general-server-setup/main/ansible-setup.sh | bash
 ```
 
 ## Notes
