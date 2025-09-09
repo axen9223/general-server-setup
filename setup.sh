@@ -10,10 +10,10 @@ else
 fi
 
 # Update and install necessary packages
-apt update -y && apt upgrade -y
-apt remove -y vim
-apt install upgrade -y dnsmasq neovim curl wget git unzip
-apt autoremove -y
+sudo apt update -y && apt upgrade -y
+sudo apt remove -y vim
+sudo apt install upgrade -y dnsmasq neovim curl wget git unzip
+sudo apt autoremove -y
 
 # Define Alias
 cat > ~/.bashrc <<EOL
