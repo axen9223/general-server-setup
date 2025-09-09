@@ -21,6 +21,11 @@ curl -s https://raw.githubusercontent.com/axen9223/general-server-setup/main/doc
 curl -s https://raw.githubusercontent.com/axen9223/general-server-setup/main/ansible-setup.sh | bash
 ```
 
+### dnsmasq
+```sh
+curl -s https://raw.githubusercontent.com/axen9223/general-server-setup/main/ansible-setup.sh | bash
+```
+
 ## Notes
 
 - Make sure you have `curl` and `bash` installed on your server.
