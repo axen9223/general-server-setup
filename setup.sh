@@ -41,6 +41,7 @@ sudo source /root/.bashrc
 echo -e '\033[1;5;33mSetting SSH Session Timeout ......\033[0m'
 if ! grep -i "ClientAliveInterval" /etc/ssh/sshd_config | grep -vE '^\s*#'; then
     echo "ClientAliveInterval 1200" >> /etc/ssh/sshd_config
+    echo "AddressFamily inet" >> /etc/ssh/sshd_config
     sudo systemctl restart sshd
     echo "SSH session timeout set to 20 minutes of inactivity."
 else

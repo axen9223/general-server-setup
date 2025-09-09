@@ -23,7 +23,7 @@ curl -s https://raw.githubusercontent.com/axen9223/general-server-setup/main/ans
 
 ### dnsmasq
 ```sh
-curl -s https://raw.githubusercontent.com/axen9223/general-server-setup/main/ansible-setup.sh | bash
+curl -s https://raw.githubusercontent.com/axen9223/general-server-setup/main/dnsmasq | bash
 ```
 
 ## Notes
