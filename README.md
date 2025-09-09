@@ -6,16 +6,17 @@ This repository provides a simple script to help you set up a fresh server quick
 
 To set up your server, run the following command:
 
+### General Servers Setup
 ```sh
 curl -s setup.sh https://raw.githubusercontent.com/axen9223/general-server-setup/main/setup.sh | bash
 ```
 
-### To Setup Docker
+### Docker Setup
 ```sh
 curl -s setup.sh https://raw.githubusercontent.com/axen9223/general-server-setup/main/docker-setup.sh | bash
 ```
 
-### To Setup ansible
+### Ansible Setup
 ```sh
 curl -s setup.sh https://raw.githubusercontent.com/axen9223/general-server-setup/main/ansible-setup.sh | bash
 ```
