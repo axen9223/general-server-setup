@@ -12,17 +12,17 @@ fi
 # Update and install necessary packages
 echo -e '\033[1;5;33mConducting apt update ......\033[0m'
 sudo apt update -y 
-echo -e '\033[1;5;33mConducting apt upgrade ......\033[0m'
-sudo apt upgrade -y
+# echo -e '\033[1;5;33mConducting apt upgrade ......\033[0m'
+# sudo apt upgrade -y
 echo -e '\033[1;5;33mConducting apt remove vim ......\033[0m'
 sudo apt remove -y vim
 echo -e '\033[1;5;33mInstalling General Packages ......\033[0m'
-sudo apt install upgrade -y dnsmasq neovim curl wget git unzip man-db
+sudo apt install neovim curl wget git unzip man-db -y
 echo -e '\033[1;5;33mClean up in progress ......\033[0m'
 sudo apt autoremove -y
 
 # Define Alias
-cat > ~/.bashrc <<EOL
+cat > /root/.bashrc <<'EOL'
 # colorful terminal
 export LS_OPTIONS='--color=auto'
 eval "$(dircolors)"
