@@ -22,6 +22,7 @@ echo -e '\033[1;5;33mClean up in progress ......\033[0m'
 sudo apt autoremove -y
 
 # Define Alias
+echo -e '\033[1;5;33mChanging the bashrc to more colorful ......\033[0m'
 cat > /root/.bashrc <<'EOL'
 # colorful terminal
 export LS_OPTIONS='--color=auto'
@@ -33,4 +34,17 @@ alias grep='grep $LS_OPTIONS'
 # custom prompt
 PS1='${debian_chroot:+($debian_chroot)}\u@\[\e[1;31m\]\h\[\e[m\]:\w\$ '
 EOL
-source ~/.bashrc
+sudo source /root/.bashrc
+
+
+# Define SSH Session Timeout
+echo -e '\033[1;5;33mSetting SSH Session Timeout ......\033[0m'
+if ! grep -i "ClientAliveInterval" /etc/ssh/sshd_config | grep -vE '^\s*#'; then
+    echo "ClientAliveInterval 1200" >> /etc/ssh/sshd_config
+    sudo systemctl restart sshd
+    echo "SSH session timeout set to 20 minutes of inactivity."
+else
+    echo "SSH session timeout is already set."
+fi
+
+echo -e '\033[1;5;32mAll Setup is Done ......\033[0m'
