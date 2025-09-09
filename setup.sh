@@ -10,9 +10,15 @@ else
 fi
 
 # Update and install necessary packages
-sudo apt update -y && apt upgrade -y
+echo -e '\033[1;5;33mConducting apt update ......\033[0m'
+sudo apt update -y 
+echo -e '\033[1;5;33mConducting apt upgrade ......\033[0m'
+sudo apt upgrade -y
+echo -e '\033[1;5;33mConducting apt remove vim ......\033[0m'
 sudo apt remove -y vim
-sudo apt install upgrade -y dnsmasq neovim curl wget git unzip
+echo -e '\033[1;5;33mInstalling General Packages ......\033[0m'
+sudo apt install upgrade -y dnsmasq neovim curl wget git unzip man-db
+echo -e '\033[1;5;33mClean up in progress ......\033[0m'
 sudo apt autoremove -y
 
 # Define Alias
