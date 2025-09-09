@@ -11,3 +11,6 @@ if ! command -v docker &> /dev/null; then
 else
     echo "Docker is already installed."
 fi
+
+echo -e '\033[1;5;32mDocker Setup Succesfuly !!!\033[0m'
+sudo docker --version
