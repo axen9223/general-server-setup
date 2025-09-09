@@ -10,7 +10,7 @@ else
 fi
 
 # Update and install necessary packages
-apt update && apt upgrade
+apt update -y && apt upgrade -y
 apt remove -y vim
 apt install upgrade -y dnsmasq neovim curl wget git unzip
 apt autoremove -y
