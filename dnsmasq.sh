@@ -26,7 +26,6 @@ cache-size=500
 neg-ttl=60
 domain-needed
 bogus-priv
-no-dhcp6
 EOF
 
 # Configure resolv.conf
@@ -43,3 +42,14 @@ fi
 sudo groupadd dnsmasq
 sudo usermod -g dnsmasq dnsmasq
 sudo systemctl restart dnsmasq
+
+# Disable IPv6
+echo -e '\033[1;5;33m Disabling IPv6 ......\033[0m'
+cat > /etc/sysctl.conf <<'EOF'
+net.ipv6.conf.all.disable_ipv6 = 1
+net.ipv6.conf.default.disable_ipv6 = 1
+net.ipv6.conf.lo.disable_ipv6 = 1
+EOF
+sudo sudo sysctl -p
+
+echo -e '\033[1;5;33m All Set !!! \033[0m'
